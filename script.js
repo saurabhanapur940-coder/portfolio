@@ -1,6 +1,7 @@
 /* ===================================================================
    SAURABH PORTFOLIO - JAVASCRIPT
-   Interactivity, Mobile Nav, Modal Handling & Contact Simulation
+   Interactivity, Mobile Nav, Modal Handling & Scroll Behavior
+   Reference: https://harsh-hak.github.io/
    =================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,16 +12,35 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
-      mobileToggle.classList.toggle('active');
       const isExpanded = navLinks.classList.contains('open');
+      mobileToggle.textContent = isExpanded ? '✕' : '☰';
       mobileToggle.setAttribute('aria-expanded', isExpanded);
     });
 
     // Close mobile nav when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
         navLinks.classList.remove('open');
-        mobileToggle.classList.remove('active');
+        mobileToggle.textContent = '☰';
+        
+        // Smooth scroll with offset for fixed navbar
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(targetId);
+          if (target) {
+            const offset = 64;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = target.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
       });
     });
   }
@@ -28,10 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Active Link Highlighting on Scroll
   const sections = document.querySelectorAll('section[id]');
   const navAnchorLinks = document.querySelectorAll('.nav-link');
+  const backToTopBtn = document.getElementById('back-to-top');
 
-  const highlightNav = () => {
+  const onScroll = () => {
     const scrollY = window.pageYOffset;
 
+    // Back to top visibility
+    if (backToTopBtn) {
+      if (scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+
+    // Active nav highlight
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 120;
@@ -49,7 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  window.addEventListener('scroll', highlightNav);
+  window.addEventListener('scroll', onScroll);
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
   // Resume Modal Handling
   const printCvBtn = document.getElementById('print-cv-btn');
@@ -100,10 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
-      const subject = document.getElementById('subject').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      if (!name || !email || !subject || !message) {
+      if (!name || !email || !message) {
         feedback.className = 'form-feedback error';
         feedback.textContent = 'Please fill out all fields before submitting.';
         return;
@@ -111,12 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Show temporary sending state
       const originalBtnText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<span>Sending...</span>';
+      submitBtn.innerHTML = 'SENDING...';
       submitBtn.disabled = true;
 
       setTimeout(() => {
         feedback.className = 'form-feedback success';
-        feedback.innerHTML = `<strong>Thank you, ${escapeHtml(name)}!</strong> Your message has been recorded. You can also reach Saurabh directly at <a href="mailto:saurabhanapur940@gmail.com" style="color: inherit; text-decoration: underline;">saurabhanapur940@gmail.com</a> or <a href="tel:+918604050638" style="color: inherit; text-decoration: underline;">+91 8604050638</a>.`;
+        feedback.innerHTML = `<strong>Thank you, ${escapeHtml(name)}!</strong> Message logged. You can also reach Saurabh directly at <a href="mailto:saurabhanapur940@gmail.com" style="color: inherit; text-decoration: underline;">saurabhanapur940@gmail.com</a> or <a href="tel:+918604050638" style="color: inherit; text-decoration: underline;">+91 8604050638</a>.`;
         
         contactForm.reset();
         submitBtn.innerHTML = originalBtnText;
