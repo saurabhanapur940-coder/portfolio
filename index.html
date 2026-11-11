@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saurabh | Portfolio - M.Pharm Scholar & B.Pharm Graduate</title>
+  <title>Saurabh | M.Pharm Scholar & B.Pharm Graduate — Portfolio</title>
   <meta name="description" content="Portfolio of Saurabh - Master of Pharmacy (M.Pharm, 2026-2028) Scholar at Goel Institute of Pharmacy and Sciences, Lucknow & B.Pharm Graduate." />
   
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
@@ -21,20 +21,20 @@
     <div class="container nav-container">
       <a href="#hero" class="brand">
         <span class="brand-text">SAURABH</span>
-        <span class="brand-dot"></span>
+        <span class="brand-square"></span>
         <span class="brand-tag">M.PHARM</span>
       </a>
 
       <nav class="nav-links" id="nav-links">
         <a href="#about" class="nav-link">About</a>
-        <a href="#education" class="nav-link">Education</a>
+        <a href="#education" class="nav-link">Academics</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-sm btn-outline">Get in Touch</a>
+        <a href="#contact" class="btn btn-sm btn-nav">Get in Touch</a>
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -48,11 +48,16 @@
   <section class="hero-section" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
+        <div class="brutalist-pill">
+          <span class="pill-dot"></span>
+          <span>CURRENTLY PURSUING M.PHARM [2026 – 2028]</span>
+        </div>
+
         <h1 class="hero-title">
           Hi, I am <span class="highlight">Saurabh</span>
         </h1>
         <p class="hero-subtitle">
-          M.Pharm Scholar (2026–2028) & B.Pharm Graduate
+          Master of Pharmacy Scholar & B.Pharm Graduate
         </p>
         
         <p class="hero-description">
@@ -62,35 +67,38 @@
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">
             <span>Contact Me</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#experience" class="btn btn-secondary">
             <span>View Experience</span>
           </a>
           <button class="btn btn-outline" id="print-cv-btn" title="Print / Download Saurabh's Resume">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span>Resume View</span>
           </button>
         </div>
 
-        <!-- Quick Hero Stats -->
+        <!-- Hero Stats Row -->
         <div class="hero-stats-row">
           <div class="hero-stat-box">
-            <div class="stat-number">M.Pharm</div>
+            <span class="stat-index">[ 01 ]</span>
+            <div class="stat-number">M.PHARM</div>
             <div class="stat-label">Goel Institute (2026–2028)</div>
           </div>
           <div class="hero-stat-box">
-            <div class="stat-number">90<span class="stat-unit">Days</span></div>
+            <span class="stat-index">[ 02 ]</span>
+            <div class="stat-number">90 <span class="stat-unit">DAYS</span></div>
             <div class="stat-label">Hospital Clinical Training</div>
           </div>
           <div class="hero-stat-box">
-            <div class="stat-number">30<span class="stat-unit">Days</span></div>
+            <span class="stat-index">[ 03 ]</span>
+            <div class="stat-number">30 <span class="stat-unit">DAYS</span></div>
             <div class="stat-label">Industrial Training</div>
           </div>
         </div>
       </div>
 
-      <!-- Hero Image Presentation -->
+      <!-- Hero Visual / Photo Card -->
       <div class="hero-visual">
         <div class="photo-card-wrapper">
           <div class="photo-card">
@@ -98,34 +106,34 @@
               <img src="assets/saurabh.png" alt="Saurabh - M.Pharm Scholar" class="profile-img" />
             </div>
             <div class="photo-card-details">
-              <div class="photo-name">Saurabh</div>
+              <div class="photo-name">SAURABH</div>
               <div class="photo-title">M.Pharm Scholar (2026–2028)</div>
               <div class="photo-meta">
-                <span>Goel Institute of Pharmacy</span>
+                <span>Goel Institute of Pharmacy & Sciences</span>
                 <span class="meta-separator">•</span>
                 <span>Lucknow</span>
               </div>
             </div>
           </div>
 
-          <!-- Floating Badges -->
+          <!-- Brutalist Floating Badges -->
           <div class="floating-badge badge-top-right">
             <div class="badge-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
             <div class="badge-text">
-              <span class="badge-title">M.Pharm (2026–2028)</span>
+              <span class="badge-title">M.PHARM [2026-28]</span>
               <span class="badge-sub">Goel Institute, Lucknow</span>
             </div>
           </div>
 
           <div class="floating-badge badge-bottom-left">
             <div class="badge-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
             </div>
             <div class="badge-text">
-              <span class="badge-title">Clinical & Industrial</span>
-              <span class="badge-sub">Hospital & Pharma Trained</span>
+              <span class="badge-title">CLINICAL & INDUSTRIAL</span>
+              <span class="badge-sub">90D Hospital + 30D Pharma</span>
             </div>
           </div>
         </div>
@@ -137,7 +145,7 @@
   <section class="section about-section" id="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">PROFILE OVERVIEW</span>
+        <span class="section-tag">[ 01 // OVERVIEW ]</span>
         <h2 class="section-title">About Me</h2>
         <div class="section-divider"></div>
       </div>
@@ -145,7 +153,9 @@
       <div class="about-grid">
         <!-- Bio -->
         <div class="about-bio-col">
-          <h3 class="about-subheading">Pharmaceutical Scholar with Clinical Precision and Industrial Exposure</h3>
+          <div class="about-quote-box">
+            <h3 class="about-subheading">Pharmaceutical Scholar with Clinical Precision and Industrial Exposure</h3>
+          </div>
           <p class="about-text">
             I am a dedicated, disciplined, and rule-abiding pharmacy professional currently pursuing my Master of Pharmacy (M.Pharm, 2026–2028) at Goel Institute of Pharmacy and Sciences, Lucknow. I completed my Bachelor of Pharmacy (B.Pharm) from Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow in 2025.
           </p>
@@ -161,41 +171,41 @@
         <div class="about-info-col">
           <div class="info-table-card">
             <div class="info-table-header">
-              <h4>Academic & Professional Summary</h4>
-              <span class="info-badge">Verified Details</span>
+              <h4>ACADEMIC & PROFESSIONAL SUMMARY</h4>
+              <span class="info-badge">VERIFIED</span>
             </div>
             
             <div class="info-list">
               <div class="info-item">
-                <span class="info-label">Name</span>
+                <span class="info-label">CANDIDATE</span>
                 <span class="info-value">Saurabh</span>
               </div>
-              <div class="info-item">
-                <span class="info-label">Current Course</span>
+              <div class="info-item highlight-row">
+                <span class="info-label">CURRENT DEGREE</span>
                 <span class="info-value">M.Pharm (2026 – 2028)</span>
               </div>
               <div class="info-item">
-                <span class="info-label">College</span>
-                <span class="info-value">Goel Institute of Pharmacy and Sciences</span>
+                <span class="info-label">INSTITUTE</span>
+                <span class="info-value">Goel Institute of Pharmacy and Sciences, Lucknow</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Undergraduate</span>
+                <span class="info-label">UNDERGRADUATE</span>
                 <span class="info-value">B.Pharm (AKTU Lucknow, 2025)</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Hospital Training</span>
+                <span class="info-label">HOSPITAL TRAINING</span>
                 <span class="info-value">90 Days (C.H.C Kohandaur)</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Industrial Training</span>
+                <span class="info-label">INDUSTRIAL TRAINING</span>
                 <span class="info-value">30 Days (Wings Biotech)</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Mobile</span>
+                <span class="info-label">MOBILE</span>
                 <span class="info-value"><a href="tel:+918604050638" class="contact-link">+91 8604050638</a></span>
               </div>
               <div class="info-item">
-                <span class="info-label">Email ID</span>
+                <span class="info-label">EMAIL ID</span>
                 <span class="info-value"><a href="mailto:saurabhanapur940@gmail.com" class="contact-link">saurabhanapur940@gmail.com</a></span>
               </div>
             </div>
@@ -209,7 +219,7 @@
   <section class="section education-section" id="education">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">ACADEMIC BACKGROUND</span>
+        <span class="section-tag">[ 02 // ACADEMICS ]</span>
         <h2 class="section-title">Academic Qualifications</h2>
         <div class="section-divider"></div>
       </div>
@@ -218,8 +228,9 @@
         <!-- Card 1: M.Pharm (Current) -->
         <div class="edu-card featured-edu">
           <div class="edu-card-top">
+            <span class="edu-index">[ 01 ]</span>
             <span class="edu-year-badge">2026 – 2028</span>
-            <span class="edu-score-pill">Pursuing</span>
+            <span class="edu-score-pill">PURSUING</span>
           </div>
           <div class="edu-degree">Master of Pharmacy (M.Pharm)</div>
           <div class="edu-institution">Goel Institute of Pharmacy and Sciences</div>
@@ -232,6 +243,7 @@
         <!-- Card 2: B.Pharm -->
         <div class="edu-card">
           <div class="edu-card-top">
+            <span class="edu-index">[ 02 ]</span>
             <span class="edu-year-badge">2021 – 2025</span>
             <span class="edu-score-pill">68.87%</span>
           </div>
@@ -246,6 +258,7 @@
         <!-- Card 3: 12th -->
         <div class="edu-card">
           <div class="edu-card-top">
+            <span class="edu-index">[ 03 ]</span>
             <span class="edu-year-badge">2021</span>
             <span class="edu-score-pill">75.00%</span>
           </div>
@@ -260,6 +273,7 @@
         <!-- Card 4: 10th -->
         <div class="edu-card">
           <div class="edu-card-top">
+            <span class="edu-index">[ 04 ]</span>
             <span class="edu-year-badge">2019</span>
             <span class="edu-score-pill">65.00%</span>
           </div>
@@ -278,7 +292,7 @@
   <section class="section experience-section" id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">PRACTICAL EXPOSURE</span>
+        <span class="section-tag">[ 03 // TRAINING ]</span>
         <h2 class="section-title">Work Experience & Training</h2>
         <div class="section-divider"></div>
       </div>
@@ -288,11 +302,11 @@
         <div class="exp-card">
           <div class="exp-header">
             <div class="exp-tag-group">
-              <span class="badge-solid-green">Hospital Training</span>
-              <span class="badge-neutral">45 Days</span>
+              <span class="badge-brutalist-blue">HOSPITAL TRAINING</span>
+              <span class="badge-neutral">45 DAYS</span>
             </div>
             <div class="exp-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 10h6M12 7v6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 10h6M12 7v6"/></svg>
             </div>
           </div>
           <h3 class="exp-role">Hospital Training - Phase I</h3>
@@ -309,11 +323,11 @@
         <div class="exp-card">
           <div class="exp-header">
             <div class="exp-tag-group">
-              <span class="badge-solid-green">Hospital Training</span>
-              <span class="badge-neutral">45 Days</span>
+              <span class="badge-brutalist-blue">HOSPITAL TRAINING</span>
+              <span class="badge-neutral">45 DAYS</span>
             </div>
             <div class="exp-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
           </div>
           <h3 class="exp-role">Hospital Training - Phase II</h3>
@@ -330,11 +344,11 @@
         <div class="exp-card">
           <div class="exp-header">
             <div class="exp-tag-group">
-              <span class="badge-solid-green">Industrial Training</span>
-              <span class="badge-neutral">30 Days</span>
+              <span class="badge-brutalist-blue">INDUSTRIAL TRAINING</span>
+              <span class="badge-neutral">30 DAYS</span>
             </div>
             <div class="exp-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
             </div>
           </div>
           <h3 class="exp-role">Pharmaceutical Industrial Training</h3>
@@ -351,11 +365,11 @@
         <div class="exp-card">
           <div class="exp-header">
             <div class="exp-tag-group">
-              <span class="badge-solid-green">Industrial Visit</span>
-              <span class="badge-neutral">Facility Tour</span>
+              <span class="badge-brutalist-blue">INDUSTRIAL VISIT</span>
+              <span class="badge-neutral">FACILITY TOUR</span>
             </div>
             <div class="exp-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/></svg>
             </div>
           </div>
           <h3 class="exp-role">Industrial Technical Visit</h3>
@@ -375,7 +389,7 @@
   <section class="section skills-section" id="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">CORE COMPETENCIES</span>
+        <span class="section-tag">[ 04 // COMPETENCIES ]</span>
         <h2 class="section-title">Professional Skills</h2>
         <div class="section-divider"></div>
       </div>
@@ -385,7 +399,7 @@
         <div class="skill-category-card">
           <div class="skill-category-header">
             <div class="skill-cat-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
             <h3>Professional Attributes</h3>
           </div>
@@ -393,7 +407,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Punctuality & Rule Adherence</span>
-                <span class="skill-badge">Core Strength</span>
+                <span class="skill-badge">CORE STRENGTH</span>
               </div>
               <p class="skill-desc">Consistently disciplined, strict follower of workplace regulations, protocols, and standard operating procedures.</p>
             </div>
@@ -401,7 +415,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Comprehensive Problem Solving</span>
-                <span class="skill-badge">Analytical</span>
+                <span class="skill-badge">ANALYTICAL</span>
               </div>
               <p class="skill-desc">Capable of addressing multifaceted challenges methodically under pressure and finding compliant solutions.</p>
             </div>
@@ -409,7 +423,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Effective Communication</span>
-                <span class="skill-badge">Interpersonal</span>
+                <span class="skill-badge">INTERPERSONAL</span>
               </div>
               <p class="skill-desc">Talkative, expressive, and clear when counseling patients, coordinating with healthcare teams, and presenting ideas.</p>
             </div>
@@ -417,7 +431,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Open-Minded & Adaptive</span>
-                <span class="skill-badge">Continuous Learner</span>
+                <span class="skill-badge">CONTINUOUS LEARNER</span>
               </div>
               <p class="skill-desc">Keen to adopt new technical workflows, accept constructive feedback, and continuously upgrade domain expertise.</p>
             </div>
@@ -428,7 +442,7 @@
         <div class="skill-category-card">
           <div class="skill-category-header">
             <div class="skill-cat-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
             <h3>Pharmaceutical Knowledge</h3>
           </div>
@@ -436,7 +450,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Hospital & Clinical Dispensing</span>
-                <span class="skill-badge">Clinical</span>
+                <span class="skill-badge">CLINICAL</span>
               </div>
               <p class="skill-desc">Prescription verification, accurate dosage calculations, patient safety adherence, and inventory maintenance.</p>
             </div>
@@ -444,7 +458,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Pharmaceutical Formulations & GMP</span>
-                <span class="skill-badge">Production</span>
+                <span class="skill-badge">PRODUCTION</span>
               </div>
               <p class="skill-desc">Practical awareness of dosage forms (tablets, syrups, injections) and adherence to Good Manufacturing Practices.</p>
             </div>
@@ -452,7 +466,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Pharmacology & Drug Action</span>
-                <span class="skill-badge">Therapeutics</span>
+                <span class="skill-badge">THERAPEUTICS</span>
               </div>
               <p class="skill-desc">In-depth grasp of drug indications, contraindications, adverse drug reactions (ADR), and therapeutic categories.</p>
             </div>
@@ -460,7 +474,7 @@
             <div class="skill-item">
               <div class="skill-item-info">
                 <span class="skill-name">Quality Control & Assurance Awareness</span>
-                <span class="skill-badge">Standards</span>
+                <span class="skill-badge">STANDARDS</span>
               </div>
               <p class="skill-desc">Familiarity with sampling, assay evaluation, packaging verification, and regulatory compliance checks.</p>
             </div>
@@ -474,7 +488,7 @@
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">COMMUNICATION</span>
+        <span class="section-tag">[ 05 // CONNECT ]</span>
         <h2 class="section-title">Get in Touch</h2>
         <div class="section-divider"></div>
       </div>
@@ -491,10 +505,10 @@
             <!-- Mobile Card -->
             <a href="tel:+918604050638" class="contact-card">
               <div class="contact-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
               <div class="contact-details">
-                <span class="contact-type">Mobile Number</span>
+                <span class="contact-type">MOBILE NUMBER</span>
                 <span class="contact-val">+91 8604050638</span>
               </div>
             </a>
@@ -502,10 +516,10 @@
             <!-- Email Card -->
             <a href="mailto:saurabhanapur940@gmail.com" class="contact-card">
               <div class="contact-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               </div>
               <div class="contact-details">
-                <span class="contact-type">Email Address</span>
+                <span class="contact-type">EMAIL ADDRESS</span>
                 <span class="contact-val">saurabhanapur940@gmail.com</span>
               </div>
             </a>
@@ -513,10 +527,10 @@
 
           <div class="contact-notice-card">
             <div class="contact-notice-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
             </div>
             <div class="contact-notice-body">
-              <strong>Direct Contact</strong>
+              <strong>DIRECT COMMUNICATION</strong>
               <p>Direct communication via phone or email is welcomed during business hours. Messages sent via the form will be promptly attended to.</p>
             </div>
           </div>
@@ -525,33 +539,33 @@
         <!-- Quick Interactive Message Form -->
         <div class="contact-form-col">
           <div class="form-wrapper">
-            <h3 class="form-title">Send a Quick Message</h3>
+            <h3 class="form-title">SEND A MESSAGE</h3>
             <p class="form-subtitle">Leave your details and message below:</p>
 
             <form id="contact-form" class="contact-form" onsubmit="return false;">
               <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
+                <label for="name" class="form-label">YOUR NAME</label>
                 <input type="text" id="name" class="form-input" placeholder="e.g. Rahul Sharma" required />
               </div>
 
               <div class="form-group">
-                <label for="email" class="form-label">Your Email</label>
+                <label for="email" class="form-label">YOUR EMAIL</label>
                 <input type="email" id="email" class="form-input" placeholder="name@company.com" required />
               </div>
 
               <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
+                <label for="subject" class="form-label">SUBJECT</label>
                 <input type="text" id="subject" class="form-input" placeholder="e.g. Academic / Professional Opportunity" required />
               </div>
 
               <div class="form-group">
-                <label for="message" class="form-label">Message</label>
+                <label for="message" class="form-label">MESSAGE</label>
                 <textarea id="message" rows="4" class="form-textarea" placeholder="Write your message here..." required></textarea>
               </div>
 
               <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
-                <span>Send Message</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>SEND MESSAGE</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
 
               <div id="form-feedback" class="form-feedback"></div>
@@ -562,19 +576,19 @@
     </div>
   </section>
 
-  <!-- Clean Minimal Footer -->
+  <!-- Clean Brutalist Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-left">
         <span class="footer-brand">SAURABH</span>
-        <span class="footer-sep">|</span>
+        <span class="footer-sep">/</span>
         <span class="footer-copy">&copy; 2026 Saurabh. All Rights Reserved.</span>
       </div>
 
       <div class="footer-right">
         <a href="#hero" class="back-to-top" id="back-to-top">
-          <span>Back to Top</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+          <span>BACK TO TOP</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
         </a>
       </div>
     </div>
@@ -585,7 +599,7 @@
     <div class="resume-modal-overlay" id="resume-overlay"></div>
     <div class="resume-modal-content">
       <div class="modal-controls">
-        <span class="modal-title">Saurabh — Curriculum Vitae</span>
+        <span class="modal-title">[ CURRICULUM VITAE // SAURABH ]</span>
         <div class="modal-btns">
           <button class="btn btn-sm btn-primary" onclick="window.print()">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
