@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isExpanded = navLinks.classList.contains('open');
       mobileToggle.textContent = isExpanded ? '✕' : '☰';
       mobileToggle.setAttribute('aria-expanded', isExpanded);
+      document.body.style.overflow = isExpanded ? 'hidden' : '';
     });
 
     // Close mobile nav when clicking a link
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', (e) => {
         navLinks.classList.remove('open');
         mobileToggle.textContent = '☰';
+        document.body.style.overflow = '';
         
         // Smooth scroll with offset for fixed navbar
         const targetId = link.getAttribute('href');
@@ -42,6 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
+    });
+  }
+
+  // Mobile Skills Accordion Toggle
+  const skillsToggleBtn = document.getElementById('skills-toggle-btn');
+  const skillsDropdownContent = document.getElementById('skills-dropdown-content');
+  const triggerArrow = document.getElementById('trigger-arrow');
+
+  if (skillsToggleBtn && skillsDropdownContent) {
+    skillsToggleBtn.addEventListener('click', () => {
+      const isOpen = skillsDropdownContent.classList.toggle('open');
+      skillsToggleBtn.setAttribute('aria-expanded', isOpen);
+      const triggerText = skillsToggleBtn.querySelector('.trigger-text');
+      if (triggerText) {
+        triggerText.textContent = isOpen ? '> HIDE_SKILLSET' : '> KNOW_MY_SKILLSET';
+      }
+      if (triggerArrow) {
+        triggerArrow.textContent = isOpen ? '▲' : '▼';
+      }
     });
   }
 
@@ -112,8 +133,32 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (printCvBtn) {
-    printCvBtn.addEventListener('click', openResumeModal);
+    printCvBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openResumeModal();
+    });
   }
+
+  // Smooth scroll for hero action links
+  document.querySelectorAll('.hero-actions a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href');
+      if (targetId && targetId !== '#resume') {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const offset = 64;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = target.getBoundingClientRect().top;
+          const offsetPosition = (elementRect - bodyRect) - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
 
   if (closeResumeBtn) {
     closeResumeBtn.addEventListener('click', closeResumeModal);
